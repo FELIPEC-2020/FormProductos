@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/holo_blue_dark"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tvTitulo"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:text="FORMULARIO PRODUCTOS"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="400dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Nombre del Producto"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTitulo" />
+
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="45dp"
+        android:ems="10"
+        android:hint="Codigo"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtNombre" />
+
+    <EditText
+        android:id="@+id/txtValor"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Valor"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtCodigo"
+        app:layout_constraintTop_toTopOf="@+id/txtNombre" />
+
+    <EditText
+        android:id="@+id/txtExcento"
+        android:layout_width="180dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="52dp"
+        android:ems="10"
+        android:hint="Excento(SI, NO)"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.025"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtCodigo" />
+
+    <EditText
+        android:id="@+id/txtCategoria"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="ABARROTES, ASEO, BEBIDAS, LACTEOS, CARNES"
+        android:inputType="textPersonName"
+        android:padding="10dp"
+        android:textColorHint="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
+        app:layout_constraintStart_toEndOf="@+id/txtExcento"
+        app:layout_constraintTop_toTopOf="@+id/txtValor" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="?android:attr/colorActivatedHighlight"
+        android:text="GUARDAR"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.031"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/txtExcento" />
+
+    <Button
+        android:id="@+id/btnMasCostoso"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="?android:attr/colorActivatedHighlight"
+        android:text="MAS COSTOSOS"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardar"
+        app:layout_constraintTop_toTopOf="@+id/txtCategoria" />
+
+    <Button
+        android:id="@+id/btnMenosCostosos"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:backgroundTint="?android:attr/colorActivatedHighlight"
+        android:text="MENOS COSTOSOS"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnExcentos"
+        app:layout_constraintTop_toBottomOf="@+id/btnMasCostoso" />
+
+    <Button
+        android:id="@+id/btnExcentos"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="?android:attr/colorActivatedHighlight"
+        android:text="EXCENTOS"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnMenosCostosos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuardar" />
+
+    <ListView
+        android:id="@+id/lvRespuesta"
+        android:layout_width="400dp"
+        android:layout_height="372dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnMenosCostosos"
+        app:layout_constraintVertical_bias="0.966" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
